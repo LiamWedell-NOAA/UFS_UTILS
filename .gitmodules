@@ -1,3 +1,5 @@
 [submodule "ccpp"]
 	path = ccpp-physics
-	url = https://github.com/ufs-community/ccpp-physics.git
+	url = https://github.com/LiamWedell-NOAA/ccpp-physics.git
+        branch = production/RRFS.v1-fireteam
+
