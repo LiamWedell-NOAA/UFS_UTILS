@@ -1586,7 +1586,7 @@
      CLON=MIN(MAX(CLON,-1.0),1.0)
 
      RLAT=DPR*ASIN(SLAT)
- 
+
      RLON0=float(kgds(8))/1000.0
 
      if ((kgds(5)-kgds(8)) > 0) then
@@ -1597,8 +1597,8 @@
 
      RLON = MOD(RLON0+HS*DPR*ACOS(CLON)+3600,360.0)
 
-     kgds(4)=nint(rlat*1000.)  ! octs 11-13, Lat of
-     kgds(5)=nint(rlon*1000.)  ! octs 14-16, Lon of
+     kgds(4)=nint(rlat*1000.)  ! octs 11-13, Lat of first grid point
+     kgds(5)=nint(rlon*1000.)  ! octs 14-16, Lon of first grid point
 
      kgds(12)=nint(float(igdstmpl(15))/float(iscale)*1000.) ! octs 29-31, Lat of
                                                             ! last grid point
@@ -1644,11 +1644,9 @@
      res = ((float(kgds(9)) / 1.e6) + (float(kgds(10)) / 1.e6)) &
              * 0.5 * 111.0
 
-
      do i = 1, 25
        print*,'final kgds ',i,kgds(i)
      enddo
-  
 
    elseif(igdtnum==30) then
 
