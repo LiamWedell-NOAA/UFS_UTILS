@@ -1990,7 +1990,7 @@ implicit none
 
  integer, intent(in)                   :: localpet
  
- integer, parameter                    :: ntrac_max=14
+ integer, parameter                    :: ntrac_max=15
  integer, parameter                    :: max_levs=1000
 
  character(len=300)                    :: the_file
